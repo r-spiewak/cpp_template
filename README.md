@@ -1,12 +1,10 @@
-# Git Template
+# C/C++ Template
 
-Template repo for Git projects.
-
-Intended to be used by other template repos to provide some common framework.
+Template repo for C/C++ projects.
 
 ## Installation
 
-1. `git clone https://github.com/r-spiewak/git_template.git`
+1. `git clone https://github.com/r-spiewak/cpp_template.git`
 
 ## Dev Installation
 
@@ -17,4 +15,12 @@ After completing the regular installation above, also do the following:
 
 Create a repo based on this template. See https://github.com/marketplace/actions/actions-template-sync to make an Action to make the new repo automatically (make a PR to) sync changes from the template (this) repo.
 
-Add checks to `checks.sh`.
+
+## To-Do
+
+[] Implement conan.
+[] Add .clang-format.
+[] Add clang-tidy.
+[] Add Catch2 for unit tests.
+[] Add sample include, src, tests.
+[] Add checks to `checks.sh`.
