@@ -18,9 +18,9 @@ Create a repo based on this template. See https://github.com/marketplace/actions
 
 ## To-Do
 
-[] Implement conan.
-[] Add .clang-format.
-[] Add clang-tidy.
-[] Add Catch2 for unit tests.
-[] Add sample include, src, tests.
+[ ] Implement conan.
+[ ] Add .clang-format.
+[ ] Add clang-tidy.
+[ ] Add Catch2 for unit tests.
+[ ] Add sample include, src, tests.
 [] Add checks to `checks.sh`.
