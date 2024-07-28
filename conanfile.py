@@ -25,8 +25,8 @@ class cpp_templateRecipe(ConanFile):
 #    def requirements(self):
 #        self.requires("base64/0.4.0")
 
-#    def build_requirements(self):
-#        self.tool_requires("cmake/[>=3.22]")
+    def build_requirements(self):
+        self.tool_requires("cmake/[>=3.22.6]")
 
     def config_options(self):
         if self.settings.os == "Windows":

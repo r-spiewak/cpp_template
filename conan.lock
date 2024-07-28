@@ -1,7 +1,9 @@
 {
     "version": "0.5",
     "requires": [],
-    "build_requires": [],
+    "build_requires": [
+        "cmake/3.30.1#6d832cf2d46f6ec969ca5ed5b41f91eb%1721643748.186"
+    ],
     "python_requires": [],
     "config_requires": []
 }
