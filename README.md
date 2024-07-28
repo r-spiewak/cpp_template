@@ -6,6 +6,7 @@ Template repo for C/C++ projects.
 
 1. `git clone https://github.com/r-spiewak/cpp_template.git`
 2. (If conan is not already installed) `pip install conan` (or alternate instructions [https://docs.conan.io/2/installation.html](https://docs.conan.io/2/installation.html))
+3. `cd cpp_template && conan install .`
 
 ## Dev Installation
 
