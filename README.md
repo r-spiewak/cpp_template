@@ -12,6 +12,7 @@ Template repo for C/C++ projects.
 
 After completing the regular installation above, also do the following:
 1. Install pre-commit (e.g., `apt install pre-commit`), if not already installed.
+2. `pre-commit install`
 
 ## Usage in Other Derived Repos
 
