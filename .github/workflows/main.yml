@@ -24,6 +24,7 @@ jobs:
     - name: Create conan2 profile
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
+          icacls ${{ runner.temp }}
           type NUL > ${{ runner.temp }}/conan_profile
         fi
         conan profile detect > ${{ runner.temp }}/conan_profile
