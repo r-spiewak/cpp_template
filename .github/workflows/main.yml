@@ -22,12 +22,18 @@ jobs:
     - name: Install conan2
       uses: turtlebrowser/get-conan@main
     - name: Create conan2 profile
-      shell: bash
       run: |
-        conan profile detect > ${{ runner.temp }}/conan_profile
-        echo "[conf]" >> ${{ runner.temp }}/conan_profile
-        echo "tools.system.package_manager:mode=install" >> ${{ runner.temp }}/conan_profile
-        echo "tools.system.package_manager:sudo=True" >> ${{ runner.temp }}/conan_profile
+        if [ "$RUNNER_OS" == "Windows ]; then
+          conan profile detect | Out-File -FilePath ${{ runner.temp }}/conan_profile
+          echo "[conf]" | Out-File -FilePath ${{ runner.temp }}/conan_profile -Append
+          echo "tools.system.package_manager:mode=install" | Out-File -FilePath ${{ runner.temp }}/conan_profile -Append
+          echo "tools.system.package_manager:sudo=True" | Out-File -FilePath ${{ runner.temp }}/conan_profile -Append
+        else
+          conan profile detect > ${{ runner.temp }}/conan_profile
+          echo "[conf]" >> ${{ runner.temp }}/conan_profile
+          echo "tools.system.package_manager:mode=install" >> ${{ runner.temp }}/conan_profile
+          echo "tools.system.package_manager:sudo=True" >> ${{ runner.temp }}/conan_profile
+        fi
     - name: Install repo
       run: |
         conan install . -pr=${{ runner.temp }}/conan_profile
