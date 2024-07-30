@@ -22,6 +22,7 @@ jobs:
     - name: Install conan2
       uses: turtlebrowser/get-conan@main
     - name: Create conan2 profile
+      shell: bash
       run: |
         conan profile detect > ${{ runner.temp }}/conan_profile
         echo "[conf]" >> ${{ runner.temp }}/conan_profile
