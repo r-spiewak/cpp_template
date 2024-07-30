@@ -25,7 +25,8 @@ jobs:
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
           # icacls ${{ runner.temp }}
-          powershell dir ${{ runner.temp }}
+          cacls ${{ runner.temp }}
+          # powershell dir ${{ runner.temp }}
           type NUL > ${{ runner.temp }}/conan_profile
         fi
         conan profile detect > ${{ runner.temp }}/conan_profile
