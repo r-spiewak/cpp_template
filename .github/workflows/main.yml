@@ -15,6 +15,15 @@ jobs:
     #     node-version: 16
     # - run: npm install-ci-test
     # - uses:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11.5'
+    - name: Install conan2
+      uses: turtlebrowser/get-conan@main
+    - name: Install repo
+      run: |
+        conan install .
     - name: Running checks
       # run: |
       #   source $VENV  
