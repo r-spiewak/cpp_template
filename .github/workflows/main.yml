@@ -30,7 +30,8 @@ jobs:
           # icacls ${{ runner.temp }}
           # cacls ${{ runner.temp }}
           # powershell dir ${{ runner.temp }}
-          type NUL > ${{ runner.temp }}/conan_profile
+          # type NUL > ${{ runner.temp }}/conan_profile
+          type "" > ${{ runner.temp }}/conan_profile
         fi
         conan profile detect > ${{ runner.temp }}/conan_profile
         echo "[conf]" >> ${{ runner.temp }}/conan_profile
