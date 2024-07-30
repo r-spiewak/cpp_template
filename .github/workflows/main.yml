@@ -23,7 +23,7 @@ jobs:
       uses: turtlebrowser/get-conan@main
     - name: Create conan2 profile
       run: |
-        if [ "$RUNNER_OS" == "Windows ]; then
+        if [ "$RUNNER_OS" == "Windows" ]; then
           conan profile detect | Out-File -FilePath ${{ runner.temp }}/conan_profile
           echo "[conf]" | Out-File -FilePath ${{ runner.temp }}/conan_profile -Append
           echo "tools.system.package_manager:mode=install" | Out-File -FilePath ${{ runner.temp }}/conan_profile -Append
