@@ -21,9 +21,15 @@ jobs:
         python-version: '3.11.5'
     - name: Install conan2
       uses: turtlebrowser/get-conan@main
+    - name: Create conan2 profile
+      run: |
+        conan profile detect > ${{ runner.temp }}/conan_profile
+        echo "[conf]" >> ${{ runner.temp }}/conan_profile
+        echo "tools.system.package_manager:mode=install" >> ${{ runner.temp }}/conan_profile
+        echo "tools.system.package_manager:sudo=True" >> ${{ runner.temp }}/conan_profile
     - name: Install repo
       run: |
-        conan install .
+        conan install . -pr=${{ runner.temp }}/conan_profile
     - name: Running checks
       # run: |
       #   source $VENV  
