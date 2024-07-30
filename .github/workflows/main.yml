@@ -39,7 +39,8 @@ jobs:
         echo "tools.system.package_manager:sudo=True" >> ${{ runner.temp }}/conan_profile
     - name: Install repo
       run: |
-        conan install . -pr=${{ runner.temp }}/conan_profile
+        # conan install . -pr=${{ runner.temp }}/conan_profile
+        conan install . -c tools.system.package_manager:mode=install
     - name: Running checks
       # run: |
       #   source $VENV  
