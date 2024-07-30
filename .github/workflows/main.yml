@@ -25,6 +25,7 @@ jobs:
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
           type nul >> ${{ runner.temp }}/conan_profile
+        fi
         conan profile detect > ${{ runner.temp }}/conan_profile
         echo "[conf]" >> ${{ runner.temp }}/conan_profile
         echo "tools.system.package_manager:mode=install" >> ${{ runner.temp }}/conan_profile
