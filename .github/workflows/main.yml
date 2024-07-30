@@ -24,8 +24,8 @@ jobs:
     - name: Create conan2 profile
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
-          if not exist "${{ runner.temp }}"; then
-             mkdir ${{ runner.temp }}
+          if [ -d "${{ runner.temp }}" ]; then
+             mkdir -p ${{ runner.temp }}
           fi
           # icacls ${{ runner.temp }}
           # cacls ${{ runner.temp }}
