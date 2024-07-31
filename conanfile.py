@@ -46,7 +46,10 @@ class cpp_templateRecipe(ConanFile):
         #        package_manager.PkgUtil(self),
         #    ]:
         #        manager.install([package])
-        packages = ["clang-format=1:14.0-55~exp2"]
+        packages = [
+            "clang-format=1:14.0-55~exp2",
+            "clang-tidy=1:14.0-55~exp2",
+        ]
         package_manager.Apt(self).install(packages,recommends=True)
 
     def config_options(self):
