@@ -28,6 +28,7 @@ class cpp_templateRecipe(ConanFile):
 
     def build_requirements(self):
         self.tool_requires("cmake/[>=3.22.6]")
+        self.tool_requires("catch2/3.6.0")
 
     def system_requirements(self):
         # This is a bad idea, since packages have different names on
