@@ -40,7 +40,7 @@ jobs:
     - name: Install repo
       run: |
         # conan install . -pr=${{ runner.temp }}/conan_profile
-        conan install . -c tools.system.package_manager:mode=install -c tools.system.package_manager:sudo=True conan --build=missing
+        conan install . -c tools.system.package_manager:mode=install -c tools.system.package_manager:sudo=True --build=missing
     - name: Running checks
       # run: |
       #   source $VENV  
