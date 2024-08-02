@@ -27,5 +27,5 @@ Create a repo based on this template. See https://github.com/marketplace/actions
 - [x] Add .clang-format.
 - [x] Add clang-tidy.
 - [x] Add Catch2 for unit tests.
-- [ ] Add sample include, src, tests.
+- [x] Add sample include, src, tests.
 - [ ] Add checks to `checks.sh`.
