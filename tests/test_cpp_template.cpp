@@ -4,6 +4,7 @@
 #include "cpp_template.h"
 
 TEST_CASE( "Example tests", "[example]" ) {
+    cpp_template();
     //REQUIRE( cpp_template() );
     REQUIRE( 3 == 2 + 1 );
 }
